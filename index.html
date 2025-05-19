@@ -119,27 +119,56 @@
   <div class="container">
     <h2 class="text-center mb-5">Advanced Features</h2>
 
-    <?php
-    $features = [
-      ["img" => "deals_events_comic.png", "title" => "Detailed Reports", "desc" => "Share a detailed hourly record for each customer..."],
-      ["img" => "lexhelp_phone_in_hand_themable_transparent.png", "title" => "Live Event Tracking", "desc" => "Easy 'start/stop' system for events..."],
-      ["img" => "lexhelp_phone_in_hand3.png", "title" => "Event Categorization", "desc" => "Insights into calls, office, and out-of-office events..."],
-      ["img" => "BannerLEXHELP_onlyman.png", "title" => "Contacts and Events Organization", "desc" => "Calendar and appointment management system..."],
-      ["img" => "contacts.png", "title" => "Transparent Report Sharing", "desc" => "Clear understanding of your value and time spent..."],
-    ];
-    foreach ($features as $i => $f) {
-      $reverse = $i % 2 === 1 ? ' flex-md-row-reverse' : '';
-      echo "<div class='row align-items-center mb-5{$reverse}'>
-              <div class='col-md-6 text-center'>
-                <img src='{$f['img']}' alt='{$f['title']}' class='img-fluid rounded' style='max-width: 150px;'>
-              </div>
-              <div class='col-md-6'>
-                <h5>{$f['title']}</h5>
-                <p>{$f['desc']}</p>
-              </div>
-            </div>";
-    }
-    ?>
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 text-center">
+        <img src="deals_events_comic.png" alt="Detailed Reports" class="img-fluid rounded" style="max-width: 150px;">
+      </div>
+      <div class="col-md-6">
+        <h5>Detailed Reports</h5>
+        <p>Share a detailed hourly record for each customer...</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6 text-center">
+        <img src="lexhelp_phone_in_hand_themable_transparent.png" alt="Live Event Tracking" class="img-fluid rounded" style="max-width: 150px;">
+      </div>
+      <div class="col-md-6">
+        <h5>Live Event Tracking</h5>
+        <p>Easy 'start/stop' system for events...</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 text-center">
+        <img src="lexhelp_phone_in_hand3.png" alt="Event Categorization" class="img-fluid rounded" style="max-width: 150px;">
+      </div>
+      <div class="col-md-6">
+        <h5>Event Categorization</h5>
+        <p>Insights into calls, office, and out-of-office events...</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6 text-center">
+        <img src="BannerLEXHELP_onlyman.png" alt="Contacts and Events Organization" class="img-fluid rounded" style="max-width: 150px;">
+      </div>
+      <div class="col-md-6">
+        <h5>Contacts and Events Organization</h5>
+        <p>Calendar and appointment management system...</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 text-center">
+        <img src="contacts.png" alt="Transparent Report Sharing" class="img-fluid rounded" style="max-width: 150px;">
+      </div>
+      <div class="col-md-6">
+        <h5>Transparent Report Sharing</h5>
+        <p>Clear understanding of your value and time spent...</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
