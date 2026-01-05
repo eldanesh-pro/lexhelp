@@ -18,35 +18,59 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- ESTILOS PERSONALIZADOS PARA EL SLIDER -->
+<!-- ESTILOS MEJORADOS PARA LA NAVEGACIÓN -->
 <style>
   /* Espacio inferior para los controles */
   .mySwiper {
-    padding-bottom: 60px; /* Deja sitio para las flechas abajo */
+    padding-bottom: 70px; /* Más espacio para que los botones grandes quepan bien */
   }
 
-  /* Personalizar flechas */
+  /* --- ESTILOS DE LOS BOTONES (FLECHAS) --- */
   .swiper-button-next, .swiper-button-prev {
-    color: #00469e !important; /* Tu color azul */
-    top: auto !important;      /* Quitar alineación vertical al centro */
-    bottom: 0px !important;    /* Ponerlas abajo del todo */
-    height: 40px;
+    width: 50px !important;       /* Área de click ancha */
+    height: 50px !important;      /* Área de click alta */
+    background-color: #e6eff8;    /* Fondo azul muy clarito para ver el botón */
+    border-radius: 50%;           /* Forma circular */
+    color: #00469e !important;    /* Color de la flecha */
+    top: auto !important;         /* Quitar alineación vertical automática */
+    bottom: 0px !important;       /* Pegados abajo */
+    z-index: 100 !important;      /* Asegurar que estén por encima de todo */
+    transition: all 0.3s ease;    /* Efecto suave al pasar el mouse */
+    
+    /* Sombra suave para que resalten */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
-  /* Ajustar posición horizontal de las flechas para que queden centradas bajo la imagen */
+  /* Ajustar el tamaño y grosor de la flechita interna */
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px !important;
+    font-weight: bold;
+  }
+
+  /* Efecto Hover (al pasar el ratón) */
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: #00469e; /* Fondo azul oscuro */
+    color: #ffffff !important; /* Flecha blanca */
+    transform: scale(1.1);     /* Crece un poquito */
+    cursor: pointer;
+  }
+
+  /* --- POSICIÓN DE LOS BOTONES --- */
+  /* Separación del centro. Ajusta el 'calc' si quieres más o menos separación */
   .swiper-button-prev {
-    left: 25% !important; /* Ajusta este % si quieres separarlas más o menos */
+    left: calc(50% - 80px) !important; 
   }
   .swiper-button-next {
-    right: 25% !important; /* Ajusta este % si quieres separarlas más o menos */
+    right: calc(50% - 80px) !important;
   }
 
-  /* Personalizar Paginación (Números) */
+  /* --- ESTILOS DE LA PAGINACIÓN (NÚMEROS 1/32) --- */
   .swiper-pagination {
-    bottom: 10px !important;
+    bottom: 12px !important;   /* Centrado verticalmente respecto a los botones */
     color: #00469e !important;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-weight: 800;          /* Letra más gruesa */
+    font-size: 1.2rem;
+    z-index: 10;
   }
   
   /* Asegurar que las imágenes no se salgan */
@@ -133,106 +157,41 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
-              <img src="1.png" alt="Imagen 1" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="2.png" alt="Imagen 2" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="3.png" alt="Imagen 3" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="4.png" alt="Imagen 4" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="5.png" alt="Imagen 5" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="6.png" alt="Imagen 6" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="7.png" alt="Imagen 7" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="8.png" alt="Imagen 8" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="9.png" alt="Imagen 9" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="10.png" alt="Imagen 10" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="11.png" alt="Imagen 11" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="12.png" alt="Imagen 12" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="13.png" alt="Imagen 13" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="14.png" alt="Imagen 14" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="15.png" alt="Imagen 15" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="16.png" alt="Imagen 16" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="17.png" alt="Imagen 17" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="18.png" alt="Imagen 18" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="19.png" alt="Imagen 19" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="20.png" alt="Imagen 20" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="21.png" alt="Imagen 21" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="22.png" alt="Imagen 22" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="23.png" alt="Imagen 23" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="24.png" alt="Imagen 24" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="25.png" alt="Imagen 25" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="26.png" alt="Imagen 26" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="27.png" alt="Imagen 27" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="28.png" alt="Imagen 28" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="29.png" alt="Imagen 29" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="30.png" alt="Imagen 30" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="31.png" alt="Imagen 31" style="width: 100%; max-width: 450px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="32.png" alt="Imagen 32" style="width: 100%; max-width: 450px;">
-            </div>
-
+            <div class="swiper-slide"><img src="1.png" alt="Imagen 1" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="2.png" alt="Imagen 2" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="3.png" alt="Imagen 3" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="4.png" alt="Imagen 4" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="5.png" alt="Imagen 5" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="6.png" alt="Imagen 6" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="7.png" alt="Imagen 7" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="8.png" alt="Imagen 8" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="9.png" alt="Imagen 9" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="10.png" alt="Imagen 10" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="11.png" alt="Imagen 11" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="12.png" alt="Imagen 12" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="13.png" alt="Imagen 13" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="14.png" alt="Imagen 14" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="15.png" alt="Imagen 15" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="16.png" alt="Imagen 16" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="17.png" alt="Imagen 17" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="18.png" alt="Imagen 18" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="19.png" alt="Imagen 19" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="20.png" alt="Imagen 20" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="21.png" alt="Imagen 21" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="22.png" alt="Imagen 22" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="23.png" alt="Imagen 23" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="24.png" alt="Imagen 24" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="25.png" alt="Imagen 25" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="26.png" alt="Imagen 26" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="27.png" alt="Imagen 27" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="28.png" alt="Imagen 28" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="29.png" alt="Imagen 29" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="30.png" alt="Imagen 30" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="31.png" alt="Imagen 31" style="width: 100%; max-width: 450px;"></div>
+            <div class="swiper-slide"><img src="32.png" alt="Imagen 32" style="width: 100%; max-width: 450px;"></div>
           </div>
           
-          <!-- Botones navegación y paginación dentro del contenedor Swiper -->
+          <!-- Botones navegación y paginación -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
@@ -363,14 +322,13 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
   },
   pagination: {
     el: '.swiper-pagination',
-    type: 'fraction', // Muestra 1 / 32
+    type: 'fraction',
   },
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
   },
   slidesPerView: 1,
-  // Hace que el alto se adapte si las imágenes varían
   autoHeight: true, 
 });
 </script>
